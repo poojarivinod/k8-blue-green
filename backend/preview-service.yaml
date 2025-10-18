@@ -1,0 +1,16 @@
+# copy from k8-expense--> backend--> manifest.yaml
+kind: Service
+apiVersion: v1
+metadata:
+  name: backend-preview
+  namespace: expense
+spec:
+  selector: # labels are used as selectors, it connects to that pod
+    app: backend
+    tier: backend
+    project: expense
+    version: green
+  ports:
+  - protocol: TCP
+    port: 8080 # service port
+    targetPort: 8080 # target container port

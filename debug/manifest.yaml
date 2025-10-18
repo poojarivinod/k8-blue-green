@@ -1,0 +1,11 @@
+# kubernetes --> kubernetes --> search as pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug # debug is name of the pod
+  namespace: expense # expense is name of the namespace
+spec:
+  # one pod can contain multiple containers
+  containers:
+  - name: debug # name of the container
+    image: poojarivinod1/debug:1.0.0 # name of the image

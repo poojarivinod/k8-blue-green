@@ -1,0 +1,10 @@
+# search in google as "aws eks targetgroupbinding" -->click on github.io
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: frontend
+spec:
+  serviceRef:
+    name: frontend # route traffic to the frontend
+    port: 80
+  targetGroupARN: target grouparn

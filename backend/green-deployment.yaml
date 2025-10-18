@@ -1,0 +1,34 @@
+# copy from k8-expense--> backend--> manifest.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-green
+  namespace: expense
+  # labels of deployment resource
+  labels:
+    app: backend
+    tier: backend
+    project: expense
+    version: green
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+      tier: backend
+      project: expense
+      version: green
+  template:
+    metadata:
+      labels:
+        app: backend
+        tier: backend
+        project: expense
+        version: green
+    spec:
+      containers:
+      - name: nginx
+        image: poojarivinod1/backend:2.0.0
+        envFrom:
+        - configMapRef:
+            name: backend
