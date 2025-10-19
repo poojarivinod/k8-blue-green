@@ -9,7 +9,8 @@ spec:
     app: backend
     tier: backend
     project: expense
-    version: green
+    #version: green
+    version: blue
   ports:
   - protocol: TCP
     port: 8080 # service port
