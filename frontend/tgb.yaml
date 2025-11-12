@@ -7,5 +7,5 @@ spec:
   serviceRef:
     name: frontend # route traffic to the frontend
     port: 80
-  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:695862934667:targetgroup/expense-dev/f8439ec18b85cd1f
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:695862934667:targetgroup/expense-dev/07da043cacbda2eb
   # aws --> ec2 --> target groups --> copy the target group  arn
