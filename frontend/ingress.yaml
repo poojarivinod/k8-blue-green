@@ -8,7 +8,7 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing # search as eks ingress controller --> click on github.io --> guide --> select the internet facing annotation.because we connect public load balancer
     alb.ingress.kubernetes.io/target-type: ip # target group instance are ip based
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:695862934667:certificate/f6b49cd7-e3eb-4063-a421-34b8dbbbaa72 # arn of certificate
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:695862934667:certificate/9347cd5d-c07f-417b-92c2-4adb592596ff # arn of certificate
     alb.ingress.kubernetes.io/group.name: joindevops # first time ingress will create load balancer and group with the name joindevops for app1. During app2, ingress will check joindevops group exist or not in manifest file, if exist,then won't create load balancer.it just add rule(app2.poojari.store) to listener.If joindevops group not exist, then create new load balancer. 
 spec:
   ingressClassName: alb
